@@ -1,0 +1,320 @@
+#Declaração de variavável
+a = 2
+b = 3
+
+#Operações aritméticas 
+a + b
+ans = 5
+
+a**b 
+ans = 8
+
+a/b
+ans = 0,6667
+
+#Comando para limpar janela de comando
+clc
+
+#Comando para identificação de variáveis
+who
+whos
+
+#Comando para limpar variável
+clear a
+clear all
+
+#Comando de ajuda(irá detalhar a função cosseno)
+help cos
+
+#Comando para buscar funções similiares
+lookfor cos
+
+#Vetores
+>> a=[2 6 3; -6 2 7]
+a =
+
+   2   6   3
+  -6   2   7
+
+>> a(2,3)
+ans = 7
+>> b = [1 2 3]
+b =
+
+   1   2   3
+
+>> b(2)=5
+b =
+
+   1   5   3
+
+#Vetor com incremento de 1
+>> a=1:5
+a =
+
+   1   2   3   4   5
+
+>> a(2:4)
+ans =
+
+   2   3   4
+
+#Vetor com incremento qualquer
+>> c=1:0.1:1.5
+c =
+
+    1.0000    1.1000    1.2000    1.3000    1.4000    1.5000
+>> d = 5:-1:1
+d =
+
+   5   4   3   2   1
+
+#Função linspace
+>> f=linspace(1,5,3)
+f =
+
+   1   3   5
+
+>> g=linspace(0,10,20)
+g =
+
+         0    0.5263    1.0526    1.5789    2.1053    2.6316    3.1579    3.6842    4.2105    4.7368    5.2632    5.7895    6.3158    6.8421    7.3684    7.8947    8.4211    8.9474    9.4737   10.0000
+
+#Vetor com incremento de 1
+>> a=(1:5)'
+a =
+
+   1
+   2
+   3
+   4
+   5
+
+#Funções com matrizes
+>> k=eye(3)
+k =
+
+Diagonal Matrix
+
+   1   0   0
+   0   1   0
+   0   0   1
+
+>> h=ones(3,5)
+h =
+
+   1   1   1   1   1
+   1   1   1   1   1
+   1   1   1   1   1
+
+>> u=zeros(3)
+u =
+
+   0   0   0
+   0   0   0
+   0   0   0
+
+>> d=rand(3)
+d =
+
+   0.308698   0.019074   0.461009
+   0.775389   0.386595   0.887960
+   0.810375   0.068622   0.324026
+
+>> x = 1:12
+x =
+
+    1    2    3    4    5    6    7    8    9   10   11   12
+>> y=reshape(x,3,4)
+y =
+
+    1    4    7   10
+    2    5    8   11
+    3    6    9   12
+
+#Combinação de matrizes
+>> a=ones(3)
+a =
+
+   1   1   1
+   1   1   1
+   1   1   1
+
+>> b=rand(3)
+b =
+
+   0.090189   0.800464   0.241730
+   0.801013   0.433809   0.271293
+   0.253073   0.380269   0.741770
+
+>> x=[a b]
+x =
+
+   1.000000   1.000000   1.000000   0.090189   0.800464   0.241730
+   1.000000   1.000000   1.000000   0.801013   0.433809   0.271293
+   1.000000   1.000000   1.000000   0.253073   0.380269   0.741770
+
+>> y=[a;b]
+y =
+
+   1.000000   1.000000   1.000000
+   1.000000   1.000000   1.000000
+   1.000000   1.000000   1.000000
+   0.090189   0.800464   0.241730
+   0.801013   0.433809   0.271293
+   0.253073   0.380269   0.741770
+
+#Operações de matrizes
+>> a = ones(3)
+a =
+
+   1   1   1
+   1   1   1
+   1   1   1
+
+>> b=rand(3)
+b =
+
+   0.4750   0.3175   0.8601
+   0.2000   0.3983   0.6742
+   0.2102   0.7393   0.3800
+
+>> x=[a+b]
+x =
+
+   1.4750   1.3175   1.8601
+   1.2000   1.3983   1.6742
+   1.2102   1.7393   1.3800
+
+>> y=[a-b]
+y =
+
+   0.5250   0.6825   0.1399
+   0.8000   0.6017   0.3258
+   0.7898   0.2607   0.6200
+
+>> a=2*a
+a =
+
+   2   2   2
+   2   2   2
+   2   2   2
+
+>> c=a*b
+c =
+
+   1.7704   2.9102   3.8287
+   1.7704   2.9102   3.8287
+   1.7704   2.9102   3.8287
+
+#Element wise
+>> a = [1 -1 2]
+a =
+
+   1  -1   2
+
+>> a.^2
+ans =
+
+   1   1   4
+
+>> b = [2 2 1]
+b =
+
+   2   2   1
+
+>> a.*b
+ans =
+
+   2  -2   2
+
+>> a./b
+ans =
+
+   0.5000  -0.5000   2.0000
+
+#Transposição de matriz
+趒>> a=[1 2 3]
+a =
+
+   1   2   3
+
+>> a'
+ans =
+
+   1
+   2
+   3
+
+#Plotagem de pontos
+>> x=1
+x = 1
+>> y=2
+y = 2
+>> plot(x,y)
+
+>> x = [1 3 6]
+x =
+
+   1   3   6
+
+>> y=[2 4 1]
+y =
+
+   2   4   1
+>> plot(x,y,'or','MarkerSize',12)
+>> grid on
+>> title('plot x vs y')
+>> set(gca,'fontsize',24)
+>> xlabel('Variable x')
+>> ylabel('Variabley')
+>> axis([0 7 0 5])
+
+#Plotagem de linhas
+ᩬ趔>> x = linspace(-2,2,5)
+x =
+
+  -2  -1   0   1   2
+>> y=0.5*x+1
+y =
+
+        0   0.5000   1.0000   1.5000   2.0000
+
+>> plot(x,y,'bo-')
+>> grid on
+>> title('plot x vs y')
+>> set(gca,'fontsize',24)
+>> xlabel('Variable x')
+>> ylabel('Variable y')
+
+#plotando 2 gráficos
+>> x1 = linspace(0,2,5)
+x1 =
+
+        0   0.5000   1.0000   1.5000   2.0000
+
+>> y1 = 0.5*x1+1
+y1 =
+
+   1.0000   1.2500   1.5000   1.7500   2.0000
+
+>> x2=linspace(0,2,5)
+x2 =
+
+        0   0.5000   1.0000   1.5000   2.0000
+
+>> y2=x2.^2
+y2 =
+
+        0   0.2500   1.0000   2.2500   4.0000
+
+>> plot(x1,y1,'bo-',x2,y2,'rx-')
+
+#Truques envolvendo gráficos
+x1=linspace(-2*pi,2*pi);
+x2=linspace(-pi,2*pi);
+y1=cos(x1);
+y2=cos(x2).^2;
+plot(x1,y1,'b-',x2,y2,'r:')
+
+
