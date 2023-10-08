@@ -44,5 +44,86 @@ set(gca,'fontsize',24)
 xlabel('tempo')
 ylabel('Amplitude')
 
-#Sinal exponencial discreto
+//////////////////////////////////////////////
 
+#Sinal exponencial discreto
+B = 1;
+r = 0.85;
+n = -10:10;
+x = B*r.^n; #exponencial decrescente
+stem(n, x)
+grid on
+title('Sinal exponencial decrescente')
+set(gca,'fontsize',24)
+xlabel('tempo')
+ylabel('Amplitude')
+
+//////////////////////////////////////////////
+
+#Sinal Senoidal Contínuo
+A = 4;
+w0 = 20*pi;
+phi = pi/6;
+t = 0:.001:1;
+cosine = A*cos(w0*t + phi);
+plot (t, cosine)
+grid on
+title('Sinal exponencial decrescente')
+set(gca,'fontsize',24)
+xlabel('tempo')
+ylabel('Amplitude')
+axis([0 1 -4.1 4.1])
+
+//////////////////////////////////////////////
+
+#Sinal Senoidal Discreto
+A = 1;
+omega = (2*pi)/12;
+phi = 0;
+n = -10:10;
+y = A*cos(omega*n + phi);
+stem(n, y, 'r')
+grid on
+title('Sinal exponencial decrescente')
+set(gca,'fontsize',24)
+xlabel('tempo')
+ylabel('Amplitude')
+
+//////////////////////////////////////////////
+
+#Sinal Senoidal Exponencialmente Amortecido
+A = 60;
+w0 = 20*pi;
+phi = 0;
+a = 6;
+t = 0:.001:1;
+expsin = A*sin(W0*t + phi).*exp(-a*t);
+plot(t, expsin)
+grid on
+title('Sinal exponencial decrescente')
+set(gca,'fontsize',24)
+xlabel('tempo')
+ylabel('Amplitude')
+
+//////////////////////////////////////////////
+
+#Função Degrau
+u = [zeros(1, 50), ones(1, 50)]
+
+#Função Impulso
+delta = [zeros(1, 49), 1 , zeros(1, 50)]
+
+//////////////////////////////////////////////
+
+#Impulso quadrado unitário de -0.5 até 0.5
+t = -1:1/500:1;
+u1 = [zeros(1, 250) , ones(1, 751)];
+u2 = [zeros(1, 751) , ones(1, 250)];
+u = u1 - u2;
+plot(t, u)
+grid on
+title('Sinal exponencial decrescente')
+set(gca,'fontsize',24)
+xlabel('tempo')
+ylabel('Amplitude')
+axis([-1 1 -0.1 1.1])
