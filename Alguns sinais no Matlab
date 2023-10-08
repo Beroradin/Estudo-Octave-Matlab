@@ -1,0 +1,48 @@
+#Sinal Periodico Quadrado Continuo
+A = 1;
+w0 = 10*pi;
+rho = 0.5;
+t = 0:0.001:1 #amostragem de 1000Hz
+sq = A*square(w0*t+rho);
+plot (t, sq)
+grid on
+title('Sinal periódico quadrado')
+set(gca,'fontsize',24)
+xlabel('tempo')
+ylabel('Amplitude')
+axis([0 1.1 -1.1 1.1])
+
+//////////////////////////////////////////////
+
+#Sinal periodico quadrado discreto
+A = 1;
+omega = pi/4;
+rho = 0.5;
+n = -10:10;
+x = A*square(omega*n + rho);
+stem(n, x)
+grid on
+title('Sinal periódico quadrado')
+set(gca,'fontsize',24)
+xlabel('tempo')
+ylabel('Amplitude')
+axis([11 10 -1 1])
+
+
+//////////////////////////////////////////////
+
+
+#Sinal exponencial contínuo
+B = 5;
+a = 6; #se a é positivo, a exponencial será crescente, caso contrário, decrescente
+t = 0:.001:1;
+x = B*exp(a*t);
+plot (t, x)
+grid on
+title('Sinal exponencial crescente')
+set(gca,'fontsize',24)
+xlabel('tempo')
+ylabel('Amplitude')
+
+#Sinal exponencial discreto
+
