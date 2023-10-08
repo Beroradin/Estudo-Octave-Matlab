@@ -1,6 +1,0 @@
-#Programa que calcula a área de um retângulo
-function area = calculaArea(a, b)
-area = a*b;
-endfunction
-
-#
