@@ -127,3 +127,24 @@ set(gca,'fontsize',24)
 xlabel('tempo')
 ylabel('Amplitude')
 axis([-1 1 -0.1 1.1])
+
+
+/////////////////////////////////////////////////
+
+#Curvas de reatância indutiva e capacitiva
+L = 880*10^-6;
+C = 220*10^-9;
+
+freq = 5000:100:20000;
+
+X_l = 2*pi.*freq*L;
+X_c = 1./(2*pi.*freq*C);
+
+
+plot(freq, X_l,'r-' ,freq, X_c,'b-')
+grid on
+set(gca,'fontsize',20)
+xlabel('Frequência [Hz]')
+ylabel('Reatância [Ohms]')
+legend('Reatância Indutiva', 'Reatância Capacitiva');
+axis([5000 20000 0 160])
